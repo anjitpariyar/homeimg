@@ -1,0 +1,145 @@
+
+/*html tag*/
+
+
+<section>
+   <div class="homeimg">
+     <div class="owl-carousel homeimg-carosel owl-theme">
+    <!-- third -->
+    <div class="item">
+      <img src="images/edit03.jpg" class="d-block w-100" alt="mountaineer girl">
+      <div class="home-img-text mycontainer">
+       <p>save upto 10%</p>
+       <h2>new collection</h2>
+       <button>view price <i class="fas fa-long-arrow-alt-right"></i></button>
+     </div>
+   </div>
+ </div>
+</div>
+</section>
+
+/* css tag */
+.homeimg img{
+			width: 100%;
+			max-height: 600px;
+			/*animation: scaleScale 30s ease-in-out infinite alternate;*/
+		}
+		.homeimg .owl-item.active img{
+			animation: scaleScale 30s ease-in-out infinite alternate;
+		}
+		
+		.homeimg .home-img-text{
+			position: absolute;
+
+			color: #fff;
+
+			text-align: right;
+
+			top: 38%;
+
+			right: 8%;
+		}
+		.homeimg .home-img-text p{
+			font-size: 30px;
+			margin-bottom: 0;
+		}
+		.homeimg .home-img-text h2{
+			margin-bottom: 15px;
+			font-family: 'Darker Grotesque', sans-serif;
+			text-transform: uppercase;
+			font-size: 50px;
+		}
+
+		/*button hover part*/
+		.homeimg .home-img-text button{
+			padding: 10px 53px 10px 30px;
+			background-color: var(--lite-golden);
+			transition: .3s linear;
+			font-weight: bold;
+			letter-spacing: .8px;
+			position: relative;
+		}
+		.homeimg .home-img-text button:hover{
+			background-color: var(--dark-golden);
+			transition: .3s linear;
+		}
+		.homeimg .home-img-text i{
+			transition: .3s linear;
+			position: absolute;
+			top: 16px;
+			right: 30px;
+		}
+		.homeimg .home-img-text button:hover i{
+
+			transform: translateX(5px);
+
+			margin-left: 2px;
+			transition: .3s linear;
+		}
+
+		.homeimg .owl-theme .owl-nav.disabled + .owl-dots {
+			margin-top: 0px;
+			position: absolute;
+			left: 47%;
+		}
+		
+		.homeimg .owl-dots .owl-dot{
+			position: relative;
+			bottom: 34px;
+			
+		}
+		.homeimg .owl-theme .owl-dots .owl-dot span{
+			width: 12px;
+			height: 12px;
+			transition: .2s all linear;
+
+		}
+		.homeimg .owl-theme .owl-dots .owl-dot:hover span{
+			background-color: var(--lite-golden);
+		}
+		
+		.homeimg .owl-theme .owl-dots .owl-dot.active span {
+			height: 10px;
+			width: 33px;
+			border-radius: 10px;
+			margin-top: 8px;
+			transition: .3s linear;
+			opacity: 1;
+			background-color: var(--lite-golden);
+		}
+		.homeimg .owl-theme .owl-dots .owl-dot {
+			outline: none;
+		}
+
+/* js tag */
+$('.homeimg-carosel').owlCarousel({
+  autoplay:true,
+  autoplaySpeed:7000,
+  slideSpeed:7000,
+  // smartspeed: 5000,
+  loop:true,
+  margin:10,
+  animateOut: 'zoomOutDown',
+  animateIn: 'fadeIn',
+  items:1,
+  responsiveClass:true,
+  responsive:{
+    0:{
+      dots:false,
+      mouseDrag:false,
+
+
+    },
+    600:{
+      dots:true,
+
+    },
+    768:{
+      touchDrag:true,
+      mouseDrag:true,
+
+    }
+
+
+  }
+});
